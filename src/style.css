@@ -121,8 +121,8 @@ p {
 
 .MoBai {
     position: relative;
-    background: url('../image/Ngang1.JPG') no-repeat center center/cover;
-    width: 100%;
+    /*background: url('../image/Ngang1.JPG') no-repeat center center/cover;
+    */width: 100%;
     height: 50vh;
     display: flex;
     align-items: center;
@@ -130,19 +130,20 @@ p {
     text-align: center;
     overflow: hidden;
     margin-bottom: 400px;
+    background-color: rgb(231, 158, 158);
 }
 
 .hero-overlay {
     position: absolute;
     inset: 0;
-    /* hồng nhạt */
+    color: rgb(231, 3, 3);
     z-index: 1;
 }
 
 .hero-content {
     position: relative;
     z-index: 2;
-    color: white;
+    color: rgb(255, 255, 255);
     padding: 20px;
 }
 
@@ -177,6 +178,6 @@ p {
 }
 
 .hero-button:hover {
-    background-color: white;
+    background-color: rgb(255, 0, 0);
     color: #f48fb1;
 }
