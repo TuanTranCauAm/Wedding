@@ -1,42 +1,53 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Thiệp cưới – Sơn & Diễm</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Thiệp cưới – Phương Lan & Trung Tuấn</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Italianno&family=Dancing+Script&family=Be+Vietnam+Pro&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="overlay"></div>
 
+  <!-- Màn hình chờ mở thiệp -->
+  <div id="welcome" class="welcome-screen">
+    <div class="tap-text">Chạm để mở thiệp</div>
+  </div>
+
+  <!-- Nội dung thiệp chính -->
+  <div class="overlay"></div>
   <div class="content">
-    <img src="../image/flower-top.png" alt="" class="top-deco fade-in" />
+    <img src="../image/Doc1.JPG" alt="Cover" class="cover-img fade-in">
     <div class="text fade-in delay-1">
-      <h1>Kính mời</h1>
+      <h1 class="subtitle">Kính mời</h1>
       <p>Quý khách và gia đình</p>
       <p>Đến dự lễ thành hôn của</p>
-      <h2>Sơn & Diễm</h2>
-      <p>Thời gian: 11:00 • 25/06/2025</p>
-      <p>Địa điểm: Nhà hàng ABC, TP.HCM</p>
+      <h2 class="title">Phương Lan ❤️ Trung Tuấn</h2>
+      <p>Thời gian: <strong>11:00 • 25/06/2025</strong></p>
+      <p>Địa điểm: <strong>Nhà hàng ABC, TP.HCM</strong></p>
     </div>
-    <img src="../image/flower-bottom.png" alt="" class="bottom-deco fade-in delay-2" />
+    <img src="../image/Doc2.JPG" alt="Decoration" class="bottom-deco fade-in delay-2">
   </div>
 
   <!-- Nhạc nền -->
   <audio id="bgm" src="../image/music.mp3" loop autoplay></audio>
 
   <script>
-    /* Simple fade-in effect */
+    // Màn hình mở thiệp
+    document.getElementById('welcome').addEventListener('click', () => {
+      const w = document.getElementById('welcome');
+      w.classList.add('fade-out');
+      setTimeout(() => w.style.display = 'none', 600);
+    });
+
+    // Fade-in nội dung
     document.addEventListener("DOMContentLoaded", () => {
       document.querySelectorAll(".fade-in").forEach(el => {
-        const delay = el.classList.contains("delay-1")
-          ? 1000
-          : el.classList.contains("delay-2")
-            ? 2000
-            : 0;
-        setTimeout(() => {
-          el.style.opacity = 1;
-        }, delay);
+        const delay = el.classList.contains("delay-1") ? 1000 :
+                      el.classList.contains("delay-2") ? 2000 : 0;
+        setTimeout(() => el.style.opacity = 1, delay);
       });
     });
   </script>
