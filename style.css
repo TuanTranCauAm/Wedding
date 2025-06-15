@@ -38,7 +38,7 @@ body {
 
 /* Nền & overlay */
 body {
-    background: #000;
+    background: #ffffff;
 }
 
 .overlay {
@@ -51,14 +51,14 @@ body {
     position: relative;
     z-index: 1;
     width: 100%;
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: #fff;
-    padding: 20px;
+    color: #a51900;
+    padding: 0px;
+    margin-top: -200px;
 }
 
 /* Ảnh chính và trang trí */
@@ -130,20 +130,20 @@ p {
     text-align: center;
     overflow: hidden;
     margin-bottom: 100px;
-    background-color: rgb(231, 158, 158);
+    background-color: #fffbea;
 }
 
 .hero-overlay {
     position: absolute;
     inset: 0;
-    color: rgb(231, 3, 3);
+    color: #a51900;
     z-index: 1;
 }
 
 .hero-content {
     position: relative;
     z-index: 2;
-    color: rgb(255, 255, 255);
+    color: #a51900;
     padding: 20px;
 }
 
@@ -178,6 +178,98 @@ p {
 }
 
 .hero-button:hover {
-    background-color: rgb(255, 0, 0);
+    background-color: #a51900;
     color: #f48fb1;
 }
+
+
+/* 2 bên gia đình */
+.two-column-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+}
+
+.left-column, .right-column {
+    width: 160px;
+  background-color: #fffbea;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  font-size: 1rem;
+  font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+/* 2 bên gia đình - hình ảnh */
+.venue-section {
+  text-align: center;
+  color: #3e1f00;
+  font-family: 'Be Vietnam Pro', sans-serif;
+  background-color: #fffbea;
+  padding: 30px 20px;
+  border-radius: 8px;
+  max-width: 500px;
+  margin: 40px auto;
+}
+
+.venue-title {
+  font-size: 1rem;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+}
+
+.venue-name {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #a51900;
+  margin-bottom: 15px;
+}
+
+.time-grid {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+.time-box {
+  border: 1px solid #a51900;
+  padding: 10px 12px;
+  border-radius: 6px;
+  min-width: 80px;
+}
+
+.time-box .label {
+  font-size: 0.75rem;
+  color: #a51900;
+  font-weight: 600;
+}
+
+.time-box .value {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #000;
+}
+
+.time-box.highlight .big {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.lunar-date {
+  font-size: 0.85rem;
+  font-style: italic;
+  margin: 10px 0;
+}
+
+.thank-text {
+  font-size: 0.95rem;
+  margin-top: 15px;
+  line-height: 1.6;
+  font-style: italic;
+}
+

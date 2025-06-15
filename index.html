@@ -1,53 +1,114 @@
 <!DOCTYPE html>
 <html lang="vi">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Thiệp cưới – Phương Lan & Trung Tuấn</title>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Thiệp cưới – Phương Lan & Trung Tuấn</title>
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Italianno&family=Dancing+Script&family=Be+Vietnam+Pro&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Italianno&family=Dancing+Script&family=Be+Vietnam+Pro&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
 
-  <!-- Màn hình chờ mở thiệp -->
-  <div id="welcome" class="welcome-screen">
-    <div class="tap-text">Chạm để mở thiệp</div>
-  </div>
-
-  <!-- Nội dung thiệp chính -->
-  <div class="overlay"></div>
-
-  <!-- Container trang chính giống hình -->
-<div class="MoBai">
-  <div class="hero-overlay"></div>
-  <div class="hero-content">
-    <p class="hero-sub">SAVE THE DATE</p>
-    <h1 class="hero-names">Phương Lan & Trung Tuấn</h1>
-    <p class="hero-date">25 tháng 06 2025</p>
-    <button class="hero-button">GỬI LỜI CHÚC</button>
-  </div>
-</div>
-
-
-  <div class="content">
-    <img src="/image/Doc1.JPG" alt="Cover" class="cover-img fade-in">
-    <div class="text fade-in delay-1">
-      <h1 class="subtitle">Kính mời</h1>
-      <p>Quý khách và gia đình</p>
-      <p>Đến dự lễ thành hôn của</p>
-      <h2 class="title">Phương Lan ❤️ Trung Tuấn</h2>
-      <p>Thời gian: <strong>11:00 • 25/06/2025</strong></p>
-      <p>Địa điểm: <strong>Nhà hàng ABC, TP.HCM</strong></p>
+    <!-- Màn hình chờ mở thiệp -->
+    <div id="welcome" class="welcome-screen">
+      <div class="tap-text">Chạm để mở thiệp</div>
     </div>
-    <img src="/image/Doc2.JPG" alt="Decoration" class="bottom-deco fade-in delay-2">
-  </div>
 
-  <!-- Nhạc nền -->
-  <audio id="bgm" src="../image/music.mp3" loop autoplay></audio>
+    <!-- Container trang chính giống hình -->
+    <div class="MoBai">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <p class="hero-sub">SAVE THE DATE</p>
+        <h1 class="hero-names">Phương Lan & Trung Tuấn</h1>
+        <p class="hero-date">25 tháng 06 2025</p>
+        <button class="hero-button">GỬI LỜI CHÚC</button>
+      </div>
+    </div>
 
-  <script>
+    <div class="content">
+      <img src="/image/Doc1.JPG" alt="Cover" class="cover-img fade-in">
+
+      <!-- Lời mời -->
+      <div class="invitation">
+        <h1 class="Wedding Invitation"><br>Wedding Invitation</h1>
+      </div>
+
+      <!-- 2 bên gia đình-->
+      <div class="two-column-container">
+        <div class="left-column">
+          <strong>
+            <p style="font-size: 15px;">NHÀ TRAI <br></p>
+            <p style="font-size: 15px;">Ông Trần Đại Nam<br>Bà Lưu Vân Khánh</p>
+          </strong>
+          <p style="font-size: 10px;">214 Lý Thánh Tông - Lộc Ninh, Đồng Hới,
+            Quảng Bình</p>
+        </div>
+
+        <div class="right-column">
+          <strong>
+            <p style="font-size: 15px;">NHÀ GÁI</p>
+            <p style="font-size: 15px;">Ông Trần Đại Nam<br>Bà Lưu Vân Khánh</p>
+          </strong>
+          <p style="font-size: 10px;">19 Trương Phúc Hùng - Lộc Ninh, Đồng Hới,
+            Quảng Bình</p>
+        </div>
+      </div>
+
+      <div class="text fade-in delay-1">
+        <p style="font-size: 20px;">Trân Trọng Báo Tin Lễ Thành Hôn Của</p>
+        <h2 class="title">Trần Trung Tuấn <br>❤️<br> Thái Phương Lan</h2>
+      </div>
+
+      <div>--------------------------------</div>
+
+      <div class="text fade-in delay-1">
+        <h1 class="subtitle">Trân Trọng Kính Mời</h1>
+        <p>THAM DỰ TIỆC MỪNG LỄ THÀNH HÔN Vào Lúc</p>
+
+        <div class="venue-section">
+          <h3 class="venue-title">KHÁCH SẠN</h3>
+          <h2 class="venue-name">SAM - QUẢNG BÌNH HOTEL</h2>
+          <p>118A Hữu Nghị - P. Nam Lý</p>
+          <p>TP. Đồng Hới - T. Quảng Bình</p>
+
+          <div class="time-grid">
+            <div class="time-box">
+              <p class="label">VÀO LÚC</p>
+              <p class="value">11:00</p>
+            </div>
+            <div class="time-box highlight">
+              <p class="label">THỨ BA</p>
+              <p class="value big">15</p>
+              <p class="label">THÁNG 7</p>
+            </div>
+            <div class="time-box">
+              <p class="label">NĂM</p>
+              <p class="value">2025</p>
+            </div>
+          </div>
+
+          <p class="lunar-date">(Nhằm ngày 21 tháng 6 năm Ất Tỵ)</p>
+
+          <p class="thank-text">
+            Sự hiện diện của quý vị là niềm<br>
+            vinh hạnh cho gia đình chúng tôi<br>
+            Rất hân hạnh được đón tiếp!
+          </p>
+        </div>
+
+      </div>
+      <img src="/image/Doc2.JPG" alt="Decoration"
+        class="bottom-deco fade-in delay-2">
+    </div>
+
+    <!-- Nhạc nền -->
+    <audio id="bgm" src="../image/music.mp3" loop autoplay></audio>
+
+    <script>
     // Màn hình mở thiệp
     document.getElementById('welcome').addEventListener('click', () => {
       const w = document.getElementById('welcome');
@@ -64,5 +125,5 @@
       });
     });
   </script>
-</body>
+  </body>
 </html>
