@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thiệp cưới – Sơn & Diễm</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="overlay"></div>
+
+  <div class="content">
+    <img src="../image/flower-top.png" alt="" class="top-deco fade-in" />
+    <div class="text fade-in delay-1">
+      <h1>Kính mời</h1>
+      <p>Quý khách và gia đình</p>
+      <p>Đến dự lễ thành hôn của</p>
+      <h2>Sơn & Diễm</h2>
+      <p>Thời gian: 11:00 • 25/06/2025</p>
+      <p>Địa điểm: Nhà hàng ABC, TP.HCM</p>
+    </div>
+    <img src="../image/flower-bottom.png" alt="" class="bottom-deco fade-in delay-2" />
+  </div>
+
+  <!-- Nhạc nền -->
+  <audio id="bgm" src="../image/music.mp3" loop autoplay></audio>
+
+  <script>
+    /* Simple fade-in effect */
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll(".fade-in").forEach(el => {
+        const delay = el.classList.contains("delay-1")
+          ? 1000
+          : el.classList.contains("delay-2")
+            ? 2000
+            : 0;
+        setTimeout(() => {
+          el.style.opacity = 1;
+        }, delay);
+      });
+    });
+  </script>
+</body>
+</html>
