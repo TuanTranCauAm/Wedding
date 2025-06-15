@@ -129,7 +129,7 @@ p {
     justify-content: center;
     text-align: center;
     overflow: hidden;
-    margin-bottom: 400px;
+    margin-bottom: 100px;
     background-color: rgb(231, 158, 158);
 }
 
@@ -158,7 +158,7 @@ p {
 
 .hero-names {
     font-family: 'Italianno', cursive;
-    font-size: 3.2rem;
+    font-size: 2.2rem;
     margin-bottom: 10px;
 }
 
