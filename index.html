@@ -279,34 +279,6 @@
           dayEl.appendChild(span);
         }
       });
-
-
-      document.getElementById('rsvp-form').addEventListener('submit', function (e) {
-      e.preventDefault();
-
-      const form = e.target;
-      const data = {
-        name: form.name.value,
-        relation: form.relation.value,
-        message: form.message.value,
-        attendance: form.attendance.value
-      };
-
-      fetch('GOOGLE_SCRIPT_URL', {
-        method: 'POST',
-        body: JSON.stringify(data)
-      })
-      .then(res => res.json())
-      .then(res => {
-        document.getElementById('form-status').textContent = '🎉 Gửi thành công!';
-        form.reset();
-      })
-      .catch(() => {
-        document.getElementById('form-status').textContent = '❌ Gửi thất bại. Vui lòng thử lại!';
-      });
-    });
-
-    
     })
     .catch(err => {
       console.error("Lỗi tải dữ liệu:", err);

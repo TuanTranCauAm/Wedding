@@ -34,5 +34,5 @@ Source code để build website lời mời đám cưới
     Mô tả: Gửi lời chúc
     Access: Anyone (Người có quyền truy cập -> Bất cứ ai)
     Bấm Deploy
-    Lấy URL → gọi là GOOGLE_SCRIPT_URL
+    Lấy URL → gọi là GOOGLE_SCRIPT_URL bỏ vào form.json
 
