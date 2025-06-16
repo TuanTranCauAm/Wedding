@@ -184,7 +184,7 @@
             <option value="maybe">Chưa chắc</option>
             <option value="no">Xin lỗi, không thể đến</option>
           </select>
-          <button type="submit">GỬI NGAY</button>
+          <button type="submit" id="submit-btn">GỬI NGAY</button>
         </form>
 
         <p id="form-status" style="text-align:center; margin-top:10px;"></p>
@@ -291,6 +291,14 @@
       console.info("Form URL:", formUrl);
       document.getElementById('rsvp-form').addEventListener('submit', function (e) {
         e.preventDefault();
+
+        const btn = document.getElementById('submit-btn');
+        const status = document.getElementById('form-status');
+
+        // Khoá nút & hiển thị đang gửi
+        btn.disabled = true;
+        btn.textContent = '⏳ Đang gửi...';
+        status.textContent = '';
 
         const form = e.target;
         const dataToSend = {
