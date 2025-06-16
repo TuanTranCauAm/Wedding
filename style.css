@@ -9,7 +9,7 @@ html,
 body {
     width: 100%;
     height: 100%;
-    font-family: 'Be Vietnam Pro', sans-serif;
+    font-family: 'Dancing Script', sans-serif;
 }
 
 /* Màn hình chờ mở thiệp */
@@ -31,14 +31,14 @@ body {
 
 .tap-text {
     font-family: 'Dancing Script', cursive;
-    font-size: 2em;
+    font-size: 5em;
     color: #fff;
     text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
 }
 
 /* Nền & overlay */
 body {
-    background: #ffffff;
+    background: #fffbea;
 }
 
 .overlay {
@@ -130,6 +130,7 @@ p {
     text-align: center;
     overflow: hidden;
     margin-bottom: 100px;
+    margin-top: -100px;
     background-color: #fffbea;
 }
 
@@ -149,7 +150,7 @@ p {
 
 .hero-sub {
     text-transform: uppercase;
-    font-size: 1rem;
+    font-size: 2.5rem;
     letter-spacing: 2px;
     font-weight: bold;
     margin-bottom: 10px;
@@ -273,3 +274,54 @@ p {
   font-style: italic;
 }
 
+/* Lịch */
+.calendar {
+  max-width: 320px;
+  margin: 40px auto;
+  background: #891b1b;
+  padding: 20px;
+  border-radius: 10px;
+  color: #fff7dc;
+  font-family: 'Be Vietnam Pro', sans-serif;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.calendar-header {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  text-align: center;
+}
+
+.day-name {
+  font-weight: bold;
+  font-size: 0.8rem;
+  padding: 4px 0;
+}
+
+.day, .empty {
+  padding: 10px 0;
+  border-radius: 4px;
+}
+
+.day.special {
+  background-color: #fff;
+  color: #c62828;
+  font-weight: bold;
+  position: relative;
+}
+
+.day.special::after {
+  content: '❤';
+  position: absolute;
+  font-size: 0.7rem;
+  top: 3px;
+  right: 5px;
+}

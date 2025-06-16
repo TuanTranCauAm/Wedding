@@ -1,0 +1,29 @@
+{
+    "date": "15-07-2025",
+    "groom": "Trần Trung Tuấn",
+    "bride": "Thái Phương Lan",
+    "parents": {
+        "groom": {
+            "father": "Trần Đại Nam",
+            "mother": "Lưu Vân Khánh",
+            "address": "214 Lý Thánh Tông - Lộc Ninh, Đồng Hới, Quảng Bình"
+        },
+        "bride": {
+            "father": "Thái Mai Hưng",
+            "mother": "Trần Thị Uyên",
+            "address": "19 Trương Phúc Hùng - Lộc Ninh, Đồng Hới, Quảng Bình"
+        }
+    },
+    "venue": {
+        "name": "SAM - QUẢNG BÌNH HOTEL",
+        "address": "118A Hữu Nghị - P. Nam Lý, TP. Đồng Hới - T. Quảng Bình",
+        "time": {
+            "hour": "11:00",
+            "day": "15",
+            "weekday": "THỨ BA",
+            "month": "07",
+            "year": "2025",
+            "lunar": "21 tháng 6 năm Ất Tỵ"
+        }
+    }
+}

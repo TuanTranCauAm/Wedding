@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="vi">
   <head>
     <meta charset="UTF-8">
@@ -15,7 +16,7 @@
 
     <!-- Màn hình chờ mở thiệp -->
     <div id="welcome" class="welcome-screen">
-      <div class="tap-text">Chạm để mở thiệp</div>
+      <div class="tap-text"  style="font-size: 30px;">Chạm để mở thiệp</div>
     </div>
 
     <!-- Container trang chính giống hình -->
@@ -23,9 +24,10 @@
       <div class="hero-overlay"></div>
       <div class="hero-content">
         <p class="hero-sub">SAVE THE DATE</p>
+        <p class="hero-date"><span id="date"></span></p>
         <h1 class="hero-names">Phương Lan & Trung Tuấn</h1>
-        <p class="hero-date">25 tháng 06 2025</p>
-        <button class="hero-button">GỬI LỜI CHÚC</button>
+
+         <!--<button class="hero-button">GỬI LỜI CHÚC</button>-->
       </div>
     </div>
 
@@ -51,7 +53,8 @@
         <div class="right-column">
           <strong>
             <p style="font-size: 15px;">NHÀ GÁI</p>
-            <p style="font-size: 15px;">Ông Thái Mai Hưng<br>Bà Trần Thị Uyên</p>
+            <p style="font-size: 15px;">Ông Thái Mai Hưng<br>Bà Trần Thị
+              Uyên</p>
           </strong>
           <p style="font-size: 10px;">19 Trương Phúc Hùng - Lộc Ninh, Đồng Hới,
             Quảng Bình</p>
@@ -60,7 +63,8 @@
 
       <div class="text fade-in delay-1">
         <p style="font-size: 20px;">Trân Trọng Báo Tin Lễ Thành Hôn Của</p>
-        <h2 class="title">Trần Trung Tuấn <br>❤️<br> Thái Phương Lan</h2>
+        <h2 class="title"><span id="groom"></span> <br>❤️<br> <span
+            id="bride"></span></h2>
       </div>
 
       <div>--------------------------------</div>
@@ -98,17 +102,60 @@
             vinh hạnh cho gia đình chúng tôi<br>
             Rất hân hạnh được đón tiếp!
           </p>
+
+          <!--Lịch-->
+          <div class="calendar">
+            <div class="calendar-header">THÁNG 7 - 2025</div>
+            <div class="calendar-grid">
+              <div class="day-name">T.2</div>
+              <div class="day-name">T.3</div>
+              <div class="day-name">T.4</div>
+              <div class="day-name">T.5</div>
+              <div class="day-name">T.6</div>
+              <div class="day-name">T.7</div>
+              <div class="day-name">CN</div>
+
+              <!-- Các ngày trống đầu tháng -->
+              <div class="empty"></div>
+              <div class="day">1</div>
+              <div class="day">2</div>
+              <div class="day">3</div>
+              <div class="day">4</div>
+              <div class="day">5</div>
+              <div class="day">6</div>
+              <div class="day">7</div>
+              <div class="day">8</div>
+              <div class="day">9</div>
+              <div class="day">10</div>
+              <div class="day">11</div>
+              <div class="day">12</div>
+              <div class="day">13</div>
+              <div class="day">14</div>
+              <div class="day special">15</div>
+              <div class="day">16</div>
+              <div class="day">17</div>
+              <div class="day">18</div>
+              <div class="day">19</div>
+              <div class="day">20</div>
+              <div class="day">21</div>
+              <div class="day">22</div>
+              <div class="day">23</div>
+              <div class="day">24</div>
+              <div class="day">25</div>
+              <div class="day">26</div>
+              <div class="day">27</div>
+              <div class="day">28</div>
+              <div class="day">29</div>
+              <div class="day">30</div>
+              <div class="day">31</div>
+            </div>
+          </div>
         </div>
 
-      </div>
-      <img src="./image/Doc2.JPG" alt="Decoration"
-        class="bottom-deco fade-in delay-2">
-    </div>
+        <!-- Nhạc nền -->
+        <audio id="bgm" src="../image/music.mp3" loop autoplay></audio>
 
-    <!-- Nhạc nền -->
-    <audio id="bgm" src="../image/music.mp3" loop autoplay></audio>
-
-    <script>
+        <script>
     // Màn hình mở thiệp
     document.getElementById('welcome').addEventListener('click', () => {
       const w = document.getElementById('welcome');
@@ -125,5 +172,38 @@
       });
     });
   </script>
-  </body>
-</html>
+      </body>
+    </html>
+
+    <script>
+  const params = new URLSearchParams(window.location.search);
+  const user = params.get("nha") || "nhatrai";
+
+  fetch(`./data/${user}.json`)
+    .then(res => res.json())
+    .then(data => {
+      document.getElementById("date").textContent = data.date;
+      document.getElementById("groom").textContent = data.groom;
+      document.getElementById("bride").textContent = data.bride;
+      document.getElementById("groom-father").textContent = data.parents.groom.father;
+      document.getElementById("groom-mother").textContent = data.parents.groom.mother;
+      document.getElementById("groom-address").textContent = data.parents.groom.address;
+
+      document.getElementById("bride-father").textContent = data.parents.bride.father;
+      document.getElementById("bride-mother").textContent = data.parents.bride.mother;
+      document.getElementById("bride-address").textContent = data.parents.bride.address;
+
+      document.getElementById("venue-name").textContent = data.venue.name;
+      document.getElementById("venue-address").textContent = data.venue.address;
+
+      document.getElementById("time-hour").textContent = data.venue.time.hour;
+      document.getElementById("time-day").textContent = data.venue.time.day;
+      document.getElementById("time-weekday").textContent = data.venue.time.weekday;
+      document.getElementById("time-month").textContent = data.venue.time.month;
+      document.getElementById("time-year").textContent = data.venue.time.year;
+      document.getElementById("time-lunar").textContent = `(Nhằm ngày ${data.venue.time.lunar})`;
+    })
+    .catch(err => {
+      console.error("Lỗi tải dữ liệu:", err);
+    });
+</script>
