@@ -172,22 +172,22 @@
       <div class="form-section">
         <h3 class="form-title">Xác Nhận Tham Dự<br>& Gửi Lời Chúc</h3>
 
-        <form action="https://formspree.io/f/your-form-id" method="POST">
+        <form id="rsvp-form">
           <input type="text" name="name" placeholder="Tên của bạn là?" required>
-          <input type="text" name="relation"
-            placeholder="Bạn là gì của Dâu Rể nhỉ?" required>
-          <textarea name="message" placeholder="Gửi lời chúc đến Dâu Rể nhé!"
-            rows="3" required></textarea>
-
+          <input type="text" name="relation" placeholder="Bạn là gì của Dâu Rể?"
+            required>
+          <textarea name="message" placeholder="Lời chúc..."
+            required></textarea>
           <select name="attendance" required>
-            <option value>Bạn Có Tham Dự Không?</option>
-            <option value="yes">Có, mình sẽ đến</option>
+            <option value>Bạn có tham dự không?</option>
+            <option value="yes">Có</option>
             <option value="maybe">Chưa chắc</option>
             <option value="no">Xin lỗi, không thể đến</option>
           </select>
-
           <button type="submit">GỬI NGAY</button>
         </form>
+
+        <p id="form-status" style="text-align:center; margin-top:10px;"></p>
       </div>
 
       <div class="gallery-grid">
@@ -279,9 +279,70 @@
           dayEl.appendChild(span);
         }
       });
+
+
+      document.getElementById('rsvp-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const form = e.target;
+      const data = {
+        name: form.name.value,
+        relation: form.relation.value,
+        message: form.message.value,
+        attendance: form.attendance.value
+      };
+
+      fetch('GOOGLE_SCRIPT_URL', {
+        method: 'POST',
+        body: JSON.stringify(data)
+      })
+      .then(res => res.json())
+      .then(res => {
+        document.getElementById('form-status').textContent = '🎉 Gửi thành công!';
+        form.reset();
+      })
+      .catch(() => {
+        document.getElementById('form-status').textContent = '❌ Gửi thất bại. Vui lòng thử lại!';
+      });
+    });
+
     
     })
     .catch(err => {
       console.error("Lỗi tải dữ liệu:", err);
+    });
+
+  fetch('./data/form.json')
+    .then(res => res.json())
+    .then(data => {
+      const formUrl = data.form_url;
+      console.info("Form URL:", formUrl);
+      document.getElementById('rsvp-form').addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const form = e.target;
+        const dataToSend = {
+          name: form.name.value,
+          relation: form.relation.value,
+          message: form.message.value,
+          attendance: form.attendance.value
+        };
+
+        fetch(formUrl, {
+          method: 'POST',
+          body: JSON.stringify(dataToSend)
+        })
+          .then(res => res.json())
+          .then(res => {
+            document.getElementById('form-status').textContent = '🎉 Gửi thành công rùi nhé!';
+            form.reset();
+          })
+          .catch(() => {
+            document.getElementById('form-status').textContent = '❌ Gửi thất bại. Quá nhọ cho bạn!';
+          });
+      });
+    })
+    .catch(err => {
+      console.error("Lỗi tải form:", err);
     });
 </script>
