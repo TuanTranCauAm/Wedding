@@ -232,6 +232,10 @@ p {
     margin-bottom: 15px;
 }
 
+.venue-address {
+    margin: auto auto 50px 50px;
+}
+
 .simple-time-grid {
     display: flex;
     justify-content: center;
@@ -444,4 +448,21 @@ p {
     background-color: #fff7ed;
     margin-top: 40px;
     border-top: 1px dashed #c39885;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 0 10px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
