@@ -16,7 +16,7 @@
 
     <!-- Màn hình chờ mở thiệp -->
     <div id="welcome" class="welcome-screen">
-      <div class="tap-text"  style="font-size: 30px;">Chạm để mở thiệp</div>
+      <div class="tap-text" style="font-size: 30px;">Chạm để mở thiệp</div>
     </div>
 
     <!-- Container trang chính giống hình -->
@@ -25,9 +25,9 @@
       <div class="hero-content">
         <p class="hero-sub">SAVE THE DATE</p>
         <p class="hero-date"><span id="date"></span></p>
-        <h1 class="hero-names">Phương Lan & Trung Tuấn</h1>
+        <h1 class="hero-names"><span id="title"></span></h1>
 
-         <!--<button class="hero-button">GỬI LỜI CHÚC</button>-->
+        <!--<button class="hero-button">GỬI LỜI CHÚC</button>-->
       </div>
     </div>
 
@@ -43,21 +43,24 @@
       <div class="two-column-container">
         <div class="left-column">
           <strong>
-            <p style="font-size: 15px;">NHÀ TRAI <br></p>
-            <p style="font-size: 15px;">Ông Trần Đại Nam<br>Bà Lưu Vân Khánh</p>
+            <p style="font-size: 20px;">
+              <span id="groom_name"></span><br>-------<br>
+              <span id="groom_father"></span><br>
+              <span id="groom_mother"></span>
+            </p>
           </strong>
-          <p style="font-size: 10px;">214 Lý Thánh Tông - Lộc Ninh, Đồng Hới,
-            Quảng Bình</p>
+          <p style="font-size: 15px;"><span id="groom_address"></span></p>
         </div>
 
         <div class="right-column">
           <strong>
-            <p style="font-size: 15px;">NHÀ GÁI</p>
-            <p style="font-size: 15px;">Ông Thái Mai Hưng<br>Bà Trần Thị
-              Uyên</p>
+            <p style="font-size: 20px;">
+              <span id="bride_name"></span><br>-------<br>
+              <span id="bride_father"></span><br>
+              <span id="bride_mother"></span>
+            </p>
           </strong>
-          <p style="font-size: 10px;">19 Trương Phúc Hùng - Lộc Ninh, Đồng Hới,
-            Quảng Bình</p>
+          <p style="font-size: 15px;"><span id="bride_address"></span></p>
         </div>
       </div>
 
@@ -69,33 +72,23 @@
 
       <div>--------------------------------</div>
 
+      <!-- Thời gian địa điểm -->
       <div class="text fade-in delay-1">
         <h1 class="subtitle">Trân Trọng Kính Mời</h1>
-        <p>THAM DỰ TIỆC MỪNG LỄ THÀNH HÔN Vào Lúc</p>
+        <p style="font-size: 35px;">Tham dự lễ thành hôn vào lúc</p>
 
         <div class="venue-section">
-          <h3 class="venue-title">KHÁCH SẠN</h3>
-          <h2 class="venue-name">SAM - QUẢNG BÌNH HOTEL</h2>
-          <p>118A Hữu Nghị - P. Nam Lý</p>
-          <p>TP. Đồng Hới - T. Quảng Bình</p>
-
-          <div class="time-grid">
-            <div class="time-box">
-              <p class="label">VÀO LÚC</p>
-              <p class="value">11:00</p>
+          <div class="simple-time-grid">
+            <div class="time-item"><span id="hour"></span></div>
+            <div class="time-center">
+              <div><span id="dayOfWeek"></span></div>
+              <div class="big-day"><span id="day"></span></div>
+              <div><span id="month"></span></div>
             </div>
-            <div class="time-box highlight">
-              <p class="label">THỨ BA</p>
-              <p class="value big">15</p>
-              <p class="label">THÁNG 7</p>
-            </div>
-            <div class="time-box">
-              <p class="label">NĂM</p>
-              <p class="value">2025</p>
-            </div>
+            <div class="time-item"><span id="year"></span></div>
           </div>
 
-          <p class="lunar-date">(Nhằm ngày 21 tháng 6 năm Ất Tỵ)</p>
+          <p class="lunar-date"><span id="lunar"></span></p>
 
           <p class="thank-text">
             Sự hiện diện của quý vị là niềm<br>
@@ -131,7 +124,7 @@
               <div class="day">12</div>
               <div class="day">13</div>
               <div class="day">14</div>
-              <div class="day special">15</div>
+              <div class="day">15</div>
               <div class="day">16</div>
               <div class="day">17</div>
               <div class="day">18</div>
@@ -152,10 +145,59 @@
           </div>
         </div>
 
+        <div class="Place">
+          <h3 class="venue-title">KHÁCH SẠN</h3>
+          <h2 class="venue-name">SAM - QUẢNG BÌNH HOTEL</h2>
+          <p>118A Hữu Nghị - P. Nam Lý</p>
+          <p>TP. Đồng Hới - T. Quảng Bình</p>
+          <div class="map-section">
+            <a href="https://maps.app.goo.gl/bQe2uKkZoY6pBqmX8" target="_blank"
+              class="map-button">Xem Chỉ Đường</a>
+
+            <div class="map-embed">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3805.789872277321!2d106.60415877598021!3d17.469768583431556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314757fdf06de683%3A0x9a19dd7c1db6f2fa!2zU0FNIFF14bqjbmcgQsOsbmggSG90ZWw!5e0!3m2!1svi!2s!4v1750089976753!5m2!1svi!2s"
+                width=100% height="300" style="border:0;" allowfullscreen
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+
+        </div>
+
         <!-- Nhạc nền -->
         <audio id="bgm" src="../image/music.mp3" loop autoplay></audio>
+      </div>
 
-        <script>
+      <!-- Xác nhận tham gia -->
+      <div class="form-section">
+        <h3 class="form-title">Xác Nhận Tham Dự<br>& Gửi Lời Chúc</h3>
+
+        <form action="https://formspree.io/f/your-form-id" method="POST">
+          <input type="text" name="name" placeholder="Tên của bạn là?" required>
+          <input type="text" name="relation"
+            placeholder="Bạn là gì của Dâu Rể nhỉ?" required>
+          <textarea name="message" placeholder="Gửi lời chúc đến Dâu Rể nhé!"
+            rows="3" required></textarea>
+
+          <select name="attendance" required>
+            <option value>Bạn Có Tham Dự Không?</option>
+            <option value="yes">Có, mình sẽ đến</option>
+            <option value="maybe">Chưa chắc</option>
+            <option value="no">Xin lỗi, không thể đến</option>
+          </select>
+
+          <button type="submit">GỬI NGAY</button>
+        </form>
+      </div>
+
+      <!-- Fotter -->
+      <div class="footer">
+        <p>Chúng tôi rất mong được đón tiếp bạn trong ngày trọng đại này!</p>
+        <p>Hãy đến và cùng chúng tôi tạo nên những kỷ niệm đẹp nhất.</p>
+      </footer>
+
+      <script>
     // Màn hình mở thiệp
     document.getElementById('welcome').addEventListener('click', () => {
       const w = document.getElementById('welcome');
@@ -172,36 +214,64 @@
       });
     });
   </script>
-      </body>
-    </html>
+    </body>
+  </html>
 
-    <script>
+  <script>
   const params = new URLSearchParams(window.location.search);
   const user = params.get("nha") || "nhatrai";
 
   fetch(`./data/${user}.json`)
     .then(res => res.json())
     .then(data => {
+      document.getElementById("title").textContent = data.title;
       document.getElementById("date").textContent = data.date;
       document.getElementById("groom").textContent = data.groom;
       document.getElementById("bride").textContent = data.bride;
-      document.getElementById("groom-father").textContent = data.parents.groom.father;
-      document.getElementById("groom-mother").textContent = data.parents.groom.mother;
-      document.getElementById("groom-address").textContent = data.parents.groom.address;
+      document.getElementById("groom_name").textContent = data.groom_name;
+      document.getElementById("groom_father").textContent = data.groom_father;
+      document.getElementById("groom_mother").textContent = data.groom_mother;
+      document.getElementById("groom_address").textContent = data.groom_address;
 
-      document.getElementById("bride-father").textContent = data.parents.bride.father;
-      document.getElementById("bride-mother").textContent = data.parents.bride.mother;
-      document.getElementById("bride-address").textContent = data.parents.bride.address;
+      document.getElementById("bride_name").textContent = data.bride_name;
+      document.getElementById("bride_father").textContent = data.bride_father;
+      document.getElementById("bride_mother").textContent = data.bride_mother;
+      document.getElementById("bride_address").textContent = data.bride_address;
 
-      document.getElementById("venue-name").textContent = data.venue.name;
-      document.getElementById("venue-address").textContent = data.venue.address;
+      document.getElementById("hour").textContent = data.hour;
+      document.getElementById("dayOfWeek").textContent = data.dayOfWeek;
+      document.getElementById("day").textContent = data.day;
+      document.getElementById("month").textContent = data.month;
+      document.getElementById("year").textContent = data.year;
+      document.getElementById("lunar").textContent = data.lunar;
 
-      document.getElementById("time-hour").textContent = data.venue.time.hour;
-      document.getElementById("time-day").textContent = data.venue.time.day;
-      document.getElementById("time-weekday").textContent = data.venue.time.weekday;
-      document.getElementById("time-month").textContent = data.venue.time.month;
-      document.getElementById("time-year").textContent = data.venue.time.year;
-      document.getElementById("time-lunar").textContent = `(Nhằm ngày ${data.venue.time.lunar})`;
+      document.getElementById("venue_name").textContent = data.venue_name;
+      document.getElementById("venue_address").textContent = data.venue_address;
+      document.getElementById("venue_map").textContent = data.venue_map;
+
+      const specialDay = parseInt(data.day); // ví dụ: 15
+console.info("Special Day:", specialDay);
+      // Tìm toàn bộ ô ngày trong lịch
+      const days = document.querySelectorAll(".calendar-grid .day");
+
+      days.forEach(dayEl => {
+        const dayNumber = parseInt(dayEl.textContent.trim());
+        console.info("Day Number:", dayNumber, "Special Day:", specialDay);
+        if (dayNumber === specialDay) {
+          // Thêm class special
+          dayEl.classList.add("special");
+
+          // Bọc lại số ngày trong span
+          const span = document.createElement("span");
+          span.className = "heart-number";
+          span.textContent = dayNumber;
+
+          // Gán lại nội dung
+          dayEl.textContent = ""; // xóa nội dung cũ
+          dayEl.appendChild(span);
+        }
+      });
+    
     })
     .catch(err => {
       console.error("Lỗi tải dữ liệu:", err);
