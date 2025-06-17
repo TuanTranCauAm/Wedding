@@ -1,229 +1,234 @@
 <!DOCTYPE html>
 
 <html lang="vi">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Thiệp cưới – Phương Lan & Trung Tuấn</title>
 
-    <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Italianno&family=Dancing+Script&family=Be+Vietnam+Pro&display=swap"
-      rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Thiệp cưới – Phương Lan & Trung Tuấn</title>
 
-    <!-- Màn hình chờ mở thiệp -->
-    <div id="welcome" class="welcome-screen">
-      <div class="tap-text" style="font-size: 30px;">Chạm để mở thiệp</div>
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Italianno&family=Dancing+Script&family=Be+Vietnam+Pro&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Màn hình chờ mở thiệp -->
+  <div id="welcome" class="welcome-screen">
+    <div class="tap-text" style="font-size: 30px;">Chạm để mở thiệp</div>
+  </div>
+
+  <!-- Container trang chính giống hình -->
+  <div class="MoBai">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-sub">SAVE THE DATE</p>
+      <p class="hero-date"><span id="date"></span></p>
+      <h1 class="hero-names"><span id="title"></span></h1>
+
+      <!--<button class="hero-button">GỬI LỜI CHÚC</button>-->
+    </div>
+  </div>
+
+  <div class="content">
+    <img src="./image/Doc1.JPG" alt="Cover" class="cover-img fade-in">
+
+    <!-- Lời mời -->
+    <div class="invitation">
+      <h1 class="Wedding Invitation"><br>Wedding Invitation</h1>
     </div>
 
-    <!-- Container trang chính giống hình -->
-    <div class="MoBai">
-      <div class="hero-overlay"></div>
-      <div class="hero-content">
-        <p class="hero-sub">SAVE THE DATE</p>
-        <p class="hero-date"><span id="date"></span></p>
-        <h1 class="hero-names"><span id="title"></span></h1>
+    <!-- 2 bên gia đình-->
+    <div class="two-column-container">
+      <div class="left-column">
+        <strong>
+          <p style="font-size: 20px;">
+            <span id="groom_name"></span><br>-------<br>
+            <span id="groom_father"></span><br>
+            <span id="groom_mother"></span>
+          </p>
+        </strong>
+        <p style="font-size: 15px;"><span id="groom_address"></span></p>
+      </div>
 
-        <!--<button class="hero-button">GỬI LỜI CHÚC</button>-->
+      <div class="right-column">
+        <strong>
+          <p style="font-size: 20px;">
+            <span id="bride_name"></span><br>-------<br>
+            <span id="bride_father"></span><br>
+            <span id="bride_mother"></span>
+          </p>
+        </strong>
+        <p style="font-size: 15px;"><span id="bride_address"></span></p>
       </div>
     </div>
 
-    <div class="content">
-      <img src="./image/Doc1.JPG" alt="Cover" class="cover-img fade-in">
+    <div class="text fade-in delay-1">
+      <p style="font-size: 20px;">Trân Trọng Báo Tin Lễ Thành Hôn Của Chúng Tôi</p>
+      <h2 class="title"><span id="groom"></span> <br>❤️<br> <span id="bride"></span></h2>
+    </div>
 
-      <!-- Lời mời -->
-      <div class="invitation">
-        <h1 class="Wedding Invitation"><br>Wedding Invitation</h1>
+    <div>--------------------------------</div>
+
+    <!-- Thời gian địa điểm -->
+    <div class="text fade-in delay-1">
+      <h1 class="subtitle">Trân Trọng Kính Mời</h1>
+      <div id="ten-trong-thiep" style="
+        font-size: 28px;
+        font-style: italic;
+        color: #0011ff;
+        position: relative;
+        display: inline-block;
+      ">
+        <!-- Tên người được mời sẽ được chèn ở đây -->
       </div>
+      <p style="font-size: 35px;">Tham dự lễ thành hôn vào lúc</p>
 
-      <!-- 2 bên gia đình-->
-      <div class="two-column-container">
-        <div class="left-column">
-          <strong>
-            <p style="font-size: 20px;">
-              <span id="groom_name"></span><br>-------<br>
-              <span id="groom_father"></span><br>
-              <span id="groom_mother"></span>
-            </p>
-          </strong>
-          <p style="font-size: 15px;"><span id="groom_address"></span></p>
-        </div>
-
-        <div class="right-column">
-          <strong>
-            <p style="font-size: 20px;">
-              <span id="bride_name"></span><br>-------<br>
-              <span id="bride_father"></span><br>
-              <span id="bride_mother"></span>
-            </p>
-          </strong>
-          <p style="font-size: 15px;"><span id="bride_address"></span></p>
-        </div>
-      </div>
-
-      <div class="text fade-in delay-1">
-        <p style="font-size: 20px;">Trân Trọng Báo Tin Lễ Thành Hôn Của</p>
-        <h2 class="title"><span id="groom"></span> <br>❤️<br> <span
-            id="bride"></span></h2>
-      </div>
-
-      <div>--------------------------------</div>
-
-      <!-- Thời gian địa điểm -->
-      <div class="text fade-in delay-1">
-        <h1 class="subtitle">Trân Trọng Kính Mời</h1>
-        <p style="font-size: 35px;">Tham dự lễ thành hôn vào lúc</p>
-
-        <div class="venue-section">
-          <div class="simple-time-grid">
-            <div class="time-item"><span id="hour"></span></div>
-            <div class="time-center">
-              <div><span id="dayOfWeek"></span></div>
-              <div class="big-day"><span id="day"></span></div>
-              <div><span id="month"></span></div>
-            </div>
-            <div class="time-item"><span id="year"></span></div>
+      <div class="venue-section">
+        <div class="simple-time-grid">
+          <div class="time-item"><span id="hour"></span></div>
+          <div class="time-center">
+            <div><span id="dayOfWeek"></span></div>
+            <div class="big-day"><span id="day"></span></div>
+            <div><span id="month"></span></div>
           </div>
+          <div class="time-item"><span id="year"></span></div>
+        </div>
 
-          <p class="lunar-date"><span id="lunar"></span></p>
+        <p class="lunar-date"><span id="lunar"></span></p>
 
-          <!--Lịch-->
-          <div class="calendar">
-            <div class="calendar-header"><span id="calendar"></span></div>
-            <div class="calendar-grid">
-              <div class="day-name">T.2</div>
-              <div class="day-name">T.3</div>
-              <div class="day-name">T.4</div>
-              <div class="day-name">T.5</div>
-              <div class="day-name">T.6</div>
-              <div class="day-name">T.7</div>
-              <div class="day-name">CN</div>
+        <!--Lịch-->
+        <div class="calendar">
+          <div class="calendar-header"><span id="calendar"></span></div>
+          <div class="calendar-grid">
+            <div class="day-name">T.2</div>
+            <div class="day-name">T.3</div>
+            <div class="day-name">T.4</div>
+            <div class="day-name">T.5</div>
+            <div class="day-name">T.6</div>
+            <div class="day-name">T.7</div>
+            <div class="day-name">CN</div>
 
-              <!-- Các ngày trống đầu tháng -->
-              <div class="empty"></div>
-              <div class="day">1</div>
-              <div class="day">2</div>
-              <div class="day">3</div>
-              <div class="day">4</div>
-              <div class="day">5</div>
-              <div class="day">6</div>
-              <div class="day">7</div>
-              <div class="day">8</div>
-              <div class="day">9</div>
-              <div class="day">10</div>
-              <div class="day">11</div>
-              <div class="day">12</div>
-              <div class="day">13</div>
-              <div class="day">14</div>
-              <div class="day">15</div>
-              <div class="day">16</div>
-              <div class="day">17</div>
-              <div class="day">18</div>
-              <div class="day">19</div>
-              <div class="day">20</div>
-              <div class="day">21</div>
-              <div class="day">22</div>
-              <div class="day">23</div>
-              <div class="day">24</div>
-              <div class="day">25</div>
-              <div class="day">26</div>
-              <div class="day">27</div>
-              <div class="day">28</div>
-              <div class="day">29</div>
-              <div class="day">30</div>
-              <div class="day">31</div>
-            </div>
+            <!-- Các ngày trống đầu tháng -->
+            <div class="empty"></div>
+            <div class="day">1</div>
+            <div class="day">2</div>
+            <div class="day">3</div>
+            <div class="day">4</div>
+            <div class="day">5</div>
+            <div class="day">6</div>
+            <div class="day">7</div>
+            <div class="day">8</div>
+            <div class="day">9</div>
+            <div class="day">10</div>
+            <div class="day">11</div>
+            <div class="day">12</div>
+            <div class="day">13</div>
+            <div class="day">14</div>
+            <div class="day">15</div>
+            <div class="day">16</div>
+            <div class="day">17</div>
+            <div class="day">18</div>
+            <div class="day">19</div>
+            <div class="day">20</div>
+            <div class="day">21</div>
+            <div class="day">22</div>
+            <div class="day">23</div>
+            <div class="day">24</div>
+            <div class="day">25</div>
+            <div class="day">26</div>
+            <div class="day">27</div>
+            <div class="day">28</div>
+            <div class="day">29</div>
+            <div class="day">30</div>
+            <div class="day">31</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="Place">
+        <h3 class="venue-title"><span id="venue_type"></span></h3>
+        <h2 class="venue-name"><span id="venue_name"></span></h2>
+        <p><span id="venue_address"></span></p>
+        <div class="map-section">
+          <a id="map-link" href="#" target="_blank" class="map-button">Xem Chỉ Đường</a>
+
+          <div class="map-embed">
+            <iframe id="map-iframe" src width=100% height="300" style="border:0;" allowfullscreen loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
 
-        <div class="Place">
-          <h3 class="venue-title"><span id="venue_type"></span></h3>
-          <h2 class="venue-name"><span id="venue_name"></span></h2>
-          <p><span id="venue_address"></span></p>
-          <div class="map-section">
-            <a id="map-link" href="#" target="_blank"
-              class="map-button">Xem Chỉ Đường</a>
-
-            <div class="map-embed">
-              <iframe id="map-iframe"
-                src
-                width=100% height="300" style="border:0;" allowfullscreen
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-          </div>
-
-        </div>
-
-        <p class="thank-text">
-          Sự hiện diện của quý vị là niềm<br>
-          vinh hạnh cho gia đình chúng tôi<br>
-          Rất hân hạnh được đón tiếp!
-        </p>
-
-        <!-- Nhạc nền -->
-        <audio id="bgm" src="../image/music.mp3" loop autoplay></audio>
       </div>
 
-      <!-- Xác nhận tham gia -->
-      <div class="form-section">
-        <h3 class="form-title">Xác Nhận Tham Dự<br>& Gửi Lời Chúc</h3>
+      <p class="thank-text">
+        Sự hiện diện của quý vị là niềm<br>
+        vinh hạnh cho gia đình chúng tôi<br>
+        Rất hân hạnh được đón tiếp!
+      </p>
 
-        <form id="rsvp-form">
-          <input type="text" name="name" placeholder="Tên của bạn là?" required>
-          <input type="text" name="relation" placeholder="Bạn là gì của Dâu Rể?"
-            required>
-          <textarea name="message" placeholder="Lời chúc..."
-            required></textarea>
-          <select name="attendance" required>
-            <option value>Bạn có tham dự không?</option>
-            <option value="yes">Có</option>
-            <option value="maybe">Chưa chắc</option>
-            <option value="no">Xin lỗi, không thể đến</option>
-          </select>
-          <button type="submit" id="submit-btn">GỬI NGAY</button>
-        </form>
+      <!-- Nhạc nền -->
+      <audio id="bgm" src="../image/music.mp3" loop autoplay></audio>
+    </div>
 
-        <p id="form-status" style="text-align:center; margin-top:10px;"></p>
-      </div>
+    <!-- Xác nhận tham gia -->
+    <div class="form-section">
+      <h3 class="form-title">Xác Nhận Tham Dự<br>& Gửi Lời Chúc</h3>
 
-      <div class="gallery-grid">
-        <img src="./image/Doc2.JPG" alt="Ảnh 1">
-        <img src="./image/Doc3.JPG" alt="Ảnh 2">
-        <img src="./image/Doc4.JPG" alt="Ảnh 3">
-        <img src="./image/Doc5.JPG" alt="Ảnh 4">
-      </div>
+      <form id="rsvp-form">
+        <input type="text" name="name" placeholder="Tên của bạn là?" required>
+        <input type="text" name="relation" placeholder="Bạn là gì của Dâu Rể?" required>
+        <textarea name="message" placeholder="Lời chúc..." required></textarea>
+        <select name="attendance" required>
+          <option value>Bạn có tham dự không?</option>
+          <option value="yes">Có</option>
+          <option value="maybe">Chưa chắc</option>
+          <option value="no">Xin lỗi, không thể đến</option>
+        </select>
+        <button type="submit" id="submit-btn">GỬI NGAY</button>
+      </form>
 
-      <!-- Fotter -->
-      <div class="footer">
-        <p>Chúng tôi rất mong được đón tiếp bạn trong ngày trọng đại này!</p>
-        <p>Hãy đến và cùng chúng tôi tạo nên những kỷ niệm đẹp nhất.</p>
+      <p id="form-status" style="text-align:center; margin-top:10px;"></p>
+    </div>
+
+    <div class="gallery-grid">
+      <img src="./image/Doc2.JPG" alt="Ảnh 1">
+      <img src="./image/Doc3.JPG" alt="Ảnh 2">
+      <img src="./image/Doc4.JPG" alt="Ảnh 3">
+      <img src="./image/Doc5.JPG" alt="Ảnh 4">
+    </div>
+
+    <!-- Fotter -->
+    <div class="footer">
+      <p>Chúng tôi rất mong được đón tiếp bạn trong ngày trọng đại này!</p>
+      <p>Hãy đến và cùng chúng tôi tạo nên những kỷ niệm đẹp nhất.</p>
       </footer>
 
       <script>
-    // Màn hình mở thiệp
-    document.getElementById('welcome').addEventListener('click', () => {
-      const w = document.getElementById('welcome');
-      w.classList.add('fade-out');
-      setTimeout(() => w.style.display = 'none', 600);
-    });
+        // Màn hình mở thiệp
+        document.getElementById('welcome').addEventListener('click', () => {
+          const w = document.getElementById('welcome');
+          w.classList.add('fade-out');
+          setTimeout(() => w.style.display = 'none', 600);
+        });
 
-    // Fade-in nội dung
-    document.addEventListener("DOMContentLoaded", () => {
-      document.querySelectorAll(".fade-in").forEach(el => {
-        const delay = el.classList.contains("delay-1") ? 1000 :
-                      el.classList.contains("delay-2") ? 2000 : 0;
-        setTimeout(() => el.style.opacity = 1, delay);
-      });
-    });
-  </script>
-    </body>
-  </html>
+        // Fade-in nội dung
+        document.addEventListener("DOMContentLoaded", () => {
+          document.querySelectorAll(".fade-in").forEach(el => {
+            const delay = el.classList.contains("delay-1") ? 1000 :
+              el.classList.contains("delay-2") ? 2000 : 0;
+            setTimeout(() => el.style.opacity = 1, delay);
+          });
+        });
+      </script>
+</body>
 
-  <script>
+</html>
+
+<script>
   const params = new URLSearchParams(window.location.search);
   const user = params.get("nha");
 
@@ -325,4 +330,17 @@
     .catch(err => {
       console.error("Lỗi tải form:", err);
     });
+
+  const ten = params.get("ten");
+  if (ten) {
+    document.getElementById("ten-trong-thiep").innerHTML =
+      `<span style="
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 0;
+          color: #9b1006;
+          z-index: -1;
+        ">.......................</span>${decodeURIComponent(ten)}`;
+  }
 </script>
