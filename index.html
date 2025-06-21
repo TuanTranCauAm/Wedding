@@ -33,7 +33,7 @@
       </div>
     </div>
 
-    <div class="content">
+    <div class="content fade-scroll">
       <img src="./image/Doc1.JPG" alt="Cover" class="cover-img fade-in">
 
       <!-- Lời mời -->
@@ -42,7 +42,7 @@
       </div>
 
       <!-- 2 bên gia đình-->
-      <div class="two-column-container">
+      <div class="two-column-container fade-scroll">
         <div class="left-column">
           <strong>
             <p style="font-size: 20px;">
@@ -66,7 +66,7 @@
         </div>
       </div>
 
-      <div class="text fade-in delay-1">
+      <div class="text fade-in delay-1 fade-scroll">
         <p style="font-size: 20px;">Trân Trọng Báo Tin Lễ Thành Hôn Của Chúng
           Tôi</p>
         <h2 class="title"><span id="groom"></span> <br>❤️<br> <span
@@ -78,9 +78,9 @@
       </div>
 
       <!-- Thời gian địa điểm -->
-      <div class="text fade-in delay-1">
+      <div class="text fade-in delay-1 fade-scroll">
         <p><br></p>
-        <h1 class="subtitle">Trân Trọng Kính Mời</h1>
+        <h1 class="subtitle fade-scroll">Trân Trọng Kính Mời</h1>
         <div id="ten-trong-thiep" style="
         font-size: 28px;
         font-style: italic;
@@ -154,7 +154,7 @@
           </div>
         </div>
 
-        <div class="Place">
+        <div class="Place fade-scroll">
           <h3 class="venue-title"><span id="venue_type"></span></h3>
           <h2 class="venue-name"><span id="venue_name"></span></h2>
           <p><span id="venue_address"></span></p>
@@ -352,4 +352,25 @@
           z-index: -1;
         "></span>${decodeURIComponent(ten)}`;
   }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target); // chỉ chạy 1 lần
+          }
+        });
+      },
+      {
+        threshold: 0.1,
+      }
+    );
+
+    // Áp dụng cho tất cả phần cần fade-on-scroll
+    document.querySelectorAll(".fade-scroll").forEach((el) => {
+      observer.observe(el);
+    });
+  });
 </script>
