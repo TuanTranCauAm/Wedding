@@ -159,7 +159,6 @@
         </div>
 
         <div class="Place fade-scroll">
-          <h3 class="venue-title"><span id="venue_type"></span></h3>
           <h2 class="venue-name"><span id="venue_name"></span></h2>
           <p><span id="venue_address"></span></p>
           <div class="map-section">
@@ -347,7 +346,6 @@
       document.getElementById("calendar").textContent = data.calendar;
       document.getElementById("lunar").textContent = data.lunar;
 
-      document.getElementById("venue_type").textContent = data.venue_type;
       document.getElementById("venue_name").textContent = data.venue_name;
       document.getElementById("venue_address").innerHTML = data.venue_address.join("<br>");
       document.getElementById("map-link").href = data.venue_map;
