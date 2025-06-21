@@ -12,9 +12,13 @@
       href="https://fonts.googleapis.com/css2?family=Italianno&family=Dancing+Script&family=Be+Vietnam+Pro&display=swap"
       rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
   </head>
 
   <body>
+    <canvas id="background-confetti"></canvas>
 
     <!-- Màn hình chờ mở thiệp -->
     <div id="welcome" class="welcome-screen">
@@ -219,14 +223,7 @@
     </footer>
 
     <script>
-        // Màn hình mở thiệp
-        document.getElementById('welcome').addEventListener('click', () => {
-          const w = document.getElementById('welcome');
-          w.classList.add('fade-out');
-          setTimeout(() => w.style.display = 'none', 600);
-        });
-
-        // Fade-in nội dung
+        //==========Fade-in nội dung==========
         document.addEventListener("DOMContentLoaded", () => {
           document.querySelectorAll(".fade-in").forEach(el => {
             const delay = el.classList.contains("delay-1") ? 1000 :
@@ -234,6 +231,81 @@
             setTimeout(() => el.style.opacity = 1, delay);
           });
         });
+        //========================================
+
+        
+        //==========Màn hình mở thiệp==========
+        document.getElementById('welcome').addEventListener('click', () => {
+          const w = document.getElementById('welcome');
+          w.classList.add('fade-out');
+          setTimeout(() => w.style.display = 'none', 600);
+
+          // 👉 Thêm hiệu ứng bùm chíu ở đây
+          triggerHeartsBoom();
+
+          function triggerHeartsBoom() {
+            // Bắn 3 đợt liên tiếp
+            for (let i = 0; i < 5; i++) {
+              setTimeout(() => {
+                confetti({
+                  particleCount: 40,
+                  spread: 90,
+                  startVelocity: 30,
+                  origin: {
+                    x: Math.random(),
+                    y: Math.random() * 0.6
+                  },
+                  shapes: ['circle'],
+                  scalar: 1.2,
+                  colors: ['#ff0055', '#ff99cc', '#ffc0cb', '#ffffff'],
+                });
+              }, i * 500);
+            }
+          }
+        });
+        //========================================
+
+
+        //==========Hiệu ứng background==========
+        const canvas = document.getElementById('background-confetti');
+          const confettiBg = confetti.create(canvas, {
+            resize: false, // để tự set kích thước
+            useWorker: true
+          });
+
+          function resizeCanvasToFullPage() {
+            canvas.width = document.body.scrollWidth;
+            canvas.height = document.body.scrollHeight;
+          }
+
+          // Resize ban đầu và khi thay đổi cửa sổ
+          resizeCanvasToFullPage();
+          window.addEventListener('resize', resizeCanvasToFullPage);
+
+          function launchStarBackgroundLoop() {
+            setInterval(() => {
+              confettiBg({
+                particleCount: 1,
+                angle: Math.random() * 360,
+                spread: 50,
+                startVelocity: 0,
+                gravity: 0,
+                ticks: 100,
+                origin: {
+                  x: Math.random(),
+                  y: Math.random()
+                },
+                colors: ['#7c2d12'],
+                shapes: ['star'], // nếu muốn đổi thành icon sao SVG cần custom thêm
+                scalar: Math.random() * 0.8 + 0.4
+              });
+            }, 100); // tốc độ: 1 hạt mỗi 200ms (nhẹ nhàng)
+            
+          }
+
+          document.addEventListener("DOMContentLoaded", launchStarBackgroundLoop);
+
+        //========================================
       </script>
   </body>
 

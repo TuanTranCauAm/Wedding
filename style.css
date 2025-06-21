@@ -39,6 +39,13 @@ body {
 /* Nền & overlay */
 body {
     background: #fffbea;
+    position: relative;
+    z-index: 5;
+}
+
+.MoBai, .content, .form-section {
+  position: relative;
+  z-index: 5;
 }
 
 .overlay {
@@ -471,9 +478,19 @@ p {
 /* Hiệu ứng */
 .fade-scroll {
   opacity: 0;
-  transition: opacity 0.4s ease-in-out;
+  transition: opacity 1s ease-in-out;
 }
 
 .fade-scroll.visible {
   opacity: 1;
+}
+
+
+/* Hiệu ứng background */
+#background-confetti {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: -100;
 }
