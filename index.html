@@ -181,7 +181,7 @@
         </p>
 
         <!-- Nhạc nền -->
-        <audio id="bgm" src="./music/RoiToiLuon.mp3" loop autoplay></audio>
+        <audio id="bgm" src="./music/RoiToiLuon.mp3" muted autoplay loop></audio>
       </div>
 
       <!-- Xác nhận tham gia -->
@@ -245,6 +245,9 @@
           const w = document.getElementById('welcome');
           w.classList.add('fade-out');
           setTimeout(() => w.style.display = 'none', 600);
+
+          bgm.muted = false;
+          bgm.play();
 
           // 👉 Thêm hiệu ứng bùm chíu ở đây
           triggerHeartsBoom();
@@ -311,6 +314,15 @@
 
           document.addEventListener("DOMContentLoaded", launchStarBackgroundLoop);
 
+        //========================================
+
+
+
+        //==========Nhạc nền==========
+        const bgm = document.getElementById("bgm");
+        bgm.addEventListener("canplaythrough", () => {
+          bgm.play();
+        });
         //========================================
       </script>
   </body>
