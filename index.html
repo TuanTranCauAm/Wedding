@@ -251,16 +251,16 @@
         });
 
         function triggerHeartsBoom() {
-            // Bắn 3 đợt liên tiếp
+            // Bắn i đợt liên tiếp
             for (let i = 0; i < 5; i++) {
               setTimeout(() => {
                 confettiWelcome({
                   particleCount: 400,
-                  spread: 90,
+                  spread: 360,
                   startVelocity: 30,
                   origin: {
                     x: Math.random(),
-                    y: Math.random() * 0.6
+                    y: Math.random()
                   },
                   shapes: ['circle'],
                   scalar: 1.2,
