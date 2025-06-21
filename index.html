@@ -19,6 +19,8 @@
 
   <body>
     <canvas id="background-confetti"></canvas>
+    <canvas id="confetti-welcome" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 100;"></canvas>
+
 
     <!-- Màn hình chờ mở thiệp -->
     <div id="welcome" class="welcome-screen">
@@ -235,6 +237,12 @@
 
         
         //==========Màn hình mở thiệp==========
+        const welcomeCanvas = document.getElementById('confetti-welcome');
+        const confettiWelcome = confetti.create(welcomeCanvas, {
+          resize: true,
+          useWorker: false,
+        });
+
         document.getElementById('welcome').addEventListener('click', () => {
           const w = document.getElementById('welcome');
           w.classList.add('fade-out');
@@ -242,13 +250,14 @@
 
           // 👉 Thêm hiệu ứng bùm chíu ở đây
           triggerHeartsBoom();
+        });
 
-          function triggerHeartsBoom() {
+        function triggerHeartsBoom() {
             // Bắn 3 đợt liên tiếp
             for (let i = 0; i < 5; i++) {
               setTimeout(() => {
-                confetti({
-                  particleCount: 40,
+                confettiWelcome({
+                  particleCount: 400,
                   spread: 90,
                   startVelocity: 30,
                   origin: {
@@ -262,7 +271,6 @@
               }, i * 500);
             }
           }
-        });
         //========================================
 
 
