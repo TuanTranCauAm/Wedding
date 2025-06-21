@@ -211,7 +211,7 @@ p {
 /* 2 bên gia đình - hình ảnh */
 .venue-section {
     text-align: center;
-    color: #3e1f00;
+    color: #a51900;
     font-family: 'Dancing Script', cursive;
     background-color: #fffbea;
     padding: 30px 20px;
@@ -221,13 +221,13 @@ p {
 }
 
 .venue-title {
-    font-size: 1rem;
+    font-size: 2rem;
     letter-spacing: 1px;
     margin-bottom: 5px;
 }
 
 .venue-name {
-    font-size: 1.4rem;
+    font-size: 2rem;
     font-weight: bold;
     color: #a51900;
     margin-bottom: 15px;
@@ -261,7 +261,7 @@ p {
     bottom: 0;
     width: 1px;
     height: 400%;
-    background: #000;
+    background: #a51900;
 }
 
 .time-item::before {
@@ -272,7 +272,7 @@ p {
     bottom: 0;
     width: 1px;
     height: 400%;
-    background: #000;
+    background: #a51900;
 }
 
 .time-item:last-child::after {
@@ -285,7 +285,7 @@ p {
 
 .time-center {
     text-align: center;
-    font-size: 0.9rem;
+    font-size: 1.3rem;
 
 }
 
