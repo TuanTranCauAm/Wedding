@@ -228,13 +228,13 @@ p {
 }
 
 .venue-title {
-    font-size: 2rem;
+    font-size: 1.6rem;
     letter-spacing: 1px;
     margin-bottom: 5px;
 }
 
 .venue-name {
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     font-weight: bold;
     color: #a51900;
     margin-bottom: 15px;
