@@ -71,8 +71,7 @@
       </div>
 
       <div class="text fade-in delay-1 fade-scroll">
-        <p style="font-size: 20px;">Trân Trọng Báo Tin Lễ Thành Hôn Của Chúng
-          Tôi</p>
+        <p style="font-size: 20px;"><span id="ceremony_annouce"></span></p>
         <h2 class="title"><span id="groom"></span> <br>❤️<br> <span
             id="bride"></span></h2>
       </div>
@@ -94,7 +93,7 @@
       ">
           <!-- Tên người được mời sẽ được chèn ở đây -->
         </div>
-        <p style="font-size: 28px;">Tham dự lễ thành hôn vào lúc</p>
+        <p style="font-size: 28px;"><span id="ceremony_invite"></span></p>
 
         <div class="venue-section">
           <div class="simple-time-grid">
@@ -349,6 +348,9 @@
       document.getElementById("bride_father").textContent = data.bride_father;
       document.getElementById("bride_mother").textContent = data.bride_mother;
       document.getElementById("bride_address").textContent = data.bride_address;
+
+      document.getElementById("ceremony_annouce").textContent = data.ceremony_annouce;
+      document.getElementById("ceremony_invite").textContent = data.ceremony_invite;
 
       document.getElementById("hour").textContent = data.hour;
       document.getElementById("dayOfWeek").textContent = data.dayOfWeek;
